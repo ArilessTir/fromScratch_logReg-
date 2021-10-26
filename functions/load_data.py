@@ -10,3 +10,7 @@ def get_xy(dataset, target):
     y = dataset[target].to_numpy().reshape((X.shape[0],1))
 
     return X,y
+
+def add_one(X):
+    one = np.ones((X.shape[0],1))
+    return np.concatenate((one,X), axis=1)
